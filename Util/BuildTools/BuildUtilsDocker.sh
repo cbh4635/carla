@@ -40,6 +40,9 @@ cmake -G "Ninja" \
     -DCMAKE_CXX_FLAGS="-fPIC -std=c++14" \
     ..
 
+# copy required .SO to 'dist' folder
+cp "${FBX2OBJ_BUILD_FOLDER}/../dependencies/lib/gcc/x64/release/libfbxsdk.so" ${FBX2OBJ_BUILD_FOLDER}/../../dist/
+
 set +e
 
 ninja
